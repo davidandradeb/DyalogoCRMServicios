@@ -5,11 +5,15 @@
  */
 package com.dyalogo.crm.servicio.ejemplo;
 
+import com.dyalogo.crm.servicios.bd.dao_general.DAOCampan;
 import com.dyalogo.crm.servicios.bd.dao_general.ExcepcionBd;
 import com.dyalogo.crm.servicios.bd.tablas.Asidim;
+import com.dyalogo.crm.servicios.bd.tablas.Campan;
+import com.dyalogo.crm.servicios.bd.tablas.Clpns;
 import com.dyalogo.crm.servicios.bd.tablas.Emarec;
 import com.dyalogo.crm.servicios.config.Configuracion;
 import com.dyalogo.crm.servicios.dao.DAOAsidim;
+import com.dyalogo.crm.servicios.dao.DAOClpns;
 import com.dyalogo.crm.servicios.dao.DAOEmarec;
 import com.dyalogo.crm.servicios.general.Constantes;
 import java.util.List;
@@ -39,6 +43,8 @@ public class MiPrimerServicio extends Thread {
         MiPrimerServicio servicio = new MiPrimerServicio();
         DAOEmarec daoEmarec_t = new DAOEmarec();
         DAOAsidim daoAsidim_t = new DAOAsidim();
+        DAOClpns daoLicencia_t = new DAOClpns();
+        DAOCampan daoCampan_t = new DAOCampan();
         List<Object> lstMuestra_t;
         Object[] objFila_t;
 
@@ -62,8 +68,8 @@ public class MiPrimerServicio extends Thread {
 //                } catch (ExcepcionBd e) {
 //                    log.error("");
 //                }
-                for (Asidim asignacion : daoAsidim_t.getTodos()) {
-                    System.out.println("Consinte: " + asignacion.getASIDIMConsInteb());
+                for (Campan campan : daoCampan_t.getTodos()) {
+                    System.out.println("Consinte: " + campan.getCAMPANConsInteb());
                 }
 
                 sleep(Constantes.ESPERA_PRINCIPAL_C);

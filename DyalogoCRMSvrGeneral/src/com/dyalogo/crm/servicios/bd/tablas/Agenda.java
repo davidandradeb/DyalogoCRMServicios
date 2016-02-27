@@ -6,6 +6,7 @@
 
 package com.dyalogo.crm.servicios.bd.tablas;
 
+import com.dyalogo.crm.servicios.bd.dao_general.ImpEntidadBase;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -26,7 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author DYALOGOSAS.davidandrade
  */
 @Entity
-@Table(name = "agenda", catalog = "DYALOGOCRM", schema = "")
+@Table(name = "AGENDA", catalog = "DYALOGOCRM", schema = "")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Agenda.findAll", query = "SELECT a FROM Agenda a"),
@@ -36,7 +37,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Agenda.findByAGENDACodiMiemb", query = "SELECT a FROM Agenda a WHERE a.agendaPK.aGENDACodiMiemb = :aGENDACodiMiemb"),
     @NamedQuery(name = "Agenda.findByAGENDAFechab", query = "SELECT a FROM Agenda a WHERE a.aGENDAFechab = :aGENDAFechab"),
     @NamedQuery(name = "Agenda.findByAGENDAHorab", query = "SELECT a FROM Agenda a WHERE a.aGENDAHorab = :aGENDAHorab")})
-public class Agenda implements Serializable {
+public class Agenda extends ImpEntidadBase implements Serializable {
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected AgendaPK agendaPK;

@@ -6,6 +6,7 @@
 
 package com.dyalogo.crm.servicios.bd.tablas;
 
+import com.dyalogo.crm.servicios.bd.dao_general.ImpEntidadBase;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -35,7 +36,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author DYALOGOSAS.davidandrade
  */
 @Entity
-@Table(name = "campan", catalog = "DYALOGOCRM", schema = "", uniqueConstraints = {
+@Table(name = "CAMPAN", catalog = "DYALOGOCRM", schema = "", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"CAMPAN_ConsInte__GUION__Gui_b", "CAMPAN_ConsInte__GUION__Pob_b", "CAMPAN_ConsInte__MUESTR_b"})})
 @XmlRootElement
 @NamedQueries({
@@ -77,7 +78,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Campan.findByCAMPANConsinteOPCIONb", query = "SELECT c FROM Campan c WHERE c.cAMPANConsinteOPCIONb = :cAMPANConsinteOPCIONb"),
     @NamedQuery(name = "Campan.findByCAMPANConfDinamb", query = "SELECT c FROM Campan c WHERE c.cAMPANConfDinamb = :cAMPANConfDinamb"),
     @NamedQuery(name = "Campan.findByCAMPANMarcadorAMDb", query = "SELECT c FROM Campan c WHERE c.cAMPANMarcadorAMDb = :cAMPANMarcadorAMDb")})
-public class Campan implements Serializable {
+public class Campan extends ImpEntidadBase implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author DYALOGOSAS.davidandrade
  */
 @Entity
-@Table(name = "campo_", catalog = "DYALOGOCRM", schema = "", uniqueConstraints = {
+@Table(name = "CAMPO_", catalog = "DYALOGOCRM", schema = "", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"CAMPO__ConsInte__PREGUN_b"})})
 @XmlRootElement
 @NamedQueries({
