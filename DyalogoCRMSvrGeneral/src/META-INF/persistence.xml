@@ -2,5 +2,15 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="DyalogoCRMSvrGeneralPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Agenda</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Proyec</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Preguntacampo</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Camord</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Pregun</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Campo</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Usuari</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Campan</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Guion</class>
+    <class>com.dyalogo.crm.servicios.bd.tablas.Muestr</class>
   </persistence-unit>
 </persistence>
